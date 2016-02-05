@@ -1,39 +1,70 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FreeCodeCamp - File Metadata Microservice by Stephen Kinnison</title>
+	<link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.3.0/css/fileinput.min.css">
+	<link href="/public/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+<body>
 
-	<head>
-		<title>Clementine.js - The elegant and lightweight full stack JavaScript boilerplate.</title>
-		
-		<link href="/public/css/main.css" rel="stylesheet" type="text/css">
-	</head>
-
-	<header>
-		<p>Welcome, <span id="display-name"></span>!</p>
-		<a class="menu" href="/profile">Profile</a>
-		<p>|</p>
-		<a class="menu" href="/logout">Logout</a>
-	</header>
-
-	<body>
-		<div class="container">
-			<img src="/public/img/clementine_150.png" />
-			<br />
-			<p class="clementine-text">Clementine.js</p>
-		</div>
-	
-		<div class="container">
-			<p>You have clicked the button <span id="click-nbr"></span> times.</p>
-			<br />
-			<div class="btn-container">
-				<button type="submit" class="btn btn-add">CLICK ME!</button>
-				<button class="btn btn-delete">RESET</button>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<p class="navbar-brand">File Metadata Microservice</p>
 			</div>
 		</div>
-		
-		<script type="text/javascript" src="common/ajax-functions.js"></script>
-		<script type="text/javascript" src="controllers/clickController.client.js"></script>
-		<script type="text/javascript" src="controllers/userController.client.js"></script>
-	</body>
+	</nav>
 
+	<div class="container">
+		<h1 class="header">
+			API Basejump: File Metadata Microservice
+		</h1>
+		<blockquote>
+			User stories:
+			<ul>1) I can submit a FormData object that includes a file upload.</ul>
+			<ul>2) When I submit something, I will receive the file size in bytes within the JSON response.</ul>
+		</blockquote>
+		<h3>Form:</h3>
+		<form id="uploadForm" enctype="multipart/form-data" action="/api/fileanalyze" method="post">
+			<label class="control-label">Select File</label>
+			<input id="inputFile" name="inputFile" type="file" class="file" data-show-preview="false">
+		</form>
+	</div>
+	<!-- /.container -->
+
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h4>Personal Bio</h4>
+					<p>I am a experienced software engineer who is dabbling in web
+						design. I have a proven track record of leading and implementing
+						multiple successful projects.</p>
+				</div>
+				<div class="col-md-6">
+					<h4>Connect</h4>
+					<p>
+						<a href="https://www.linkedin.com/in/stephenkinnison"
+							target="_blank"><i class="fa fa-linkedin fa-fw"></i> Linkedin</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.3.0/js/fileinput.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
 </html>
